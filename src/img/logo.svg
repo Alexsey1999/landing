@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="152" height="152" viewBox="0 0 152 152">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+        fill-opacity: 0;
+      }
+
+      .cls-2, .cls-3 {
+        font-size: 45px;
+      }
+
+      .cls-3 {
+        text-anchor: middle;
+        font-family: "Montserrat-Bold";
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+  <g>
+    <circle cx="76" cy="76" r="75" class="cls-1"/>
+    <text x="76" y="92" class="cls-2"><tspan class="cls-3">Mini</tspan></text>
+  </g>
+</svg>

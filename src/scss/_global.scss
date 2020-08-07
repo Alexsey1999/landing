@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  font-family: OpenSans;
+  font-weight: 400;
+  font-size: 16px;
+  color: #737373;
+  min-width: 320px;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0px auto;
+  z-index: 1000;
+}
+
+.default-title {
+  color: #0d0d0d;
+  font-family: OpenSans;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+.default-descr {
+  font-family: OpenSans;
+  line-height: 28px;
+  color: #737373;
+  font-weight: 400;
+  color: #595959;
+  font-size: 15px;
+}
+
+.default-btn {
+  border: 2px solid $accent;
+  color: #0d0d0d;
+}
+
+.default-circle {
+  width: 125px;
+  height: 125px;
+  background-color: #fff;
+  border: 2px solid $accent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skew-block {
+  position: relative;
+  padding: 240px 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    transform-origin: top left;
+    transform: skewY(-1.5deg);
+    z-index: 10;
+    @media (max-width: 1130px) {
+      height: 60px;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    transform-origin: bottom right;
+    transform: skewY(-1.5deg);
+    z-index: 10;
+    @media (max-width: 1130px) {
+      height: 60px;
+    }
+  }
+}
+
+.skew-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9;
+  display: block;
+}
+
+.header-block {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1120px;
+  @media (max-width: 880px) {
+    display: block;
+  }
+  &::before {
+    display: none;
+  }
+  &__title {
+    z-index: 10;
+    max-width: 272px;
+    padding-right: 27px;
+    position: relative;
+    color: #0d0d0d;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+  &__descr {
+    @media (max-width: 880px) {
+      &::before {
+        display: none;
+      }
+      padding-left: 0;
+    }
+    position: relative;
+    padding-left: 27px;
+    color: #4d4d4d;
+    line-height: 25px;
+    text-transform: uppercase;
+
+    &::before {
+      padding: 2px 0;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 4px;
+      background-color: $accent;
+      display: block;
+    }
+  }
+}
