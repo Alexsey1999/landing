@@ -7,9 +7,10 @@ const gulp = require('gulp'),
       gcmq = require('gulp-group-css-media-queries');
       cleanCSS = require('gulp-clean-css');
       rename = require('gulp-rename')
+      pathjs = require('path');
       uglify = require('gulp-uglify-es').default;
       babel = require('gulp-babel');
-      ghPages = require('gulp-gh-pages');
+      ghPages = require('gh-pages');
 
 const prod_folder = 'dist'
 const source_folder = 'src'
@@ -115,10 +116,9 @@ function jslibs() {
     .pipe(gulp.dest(path.build.js + '/libs'))
 }
 
-gulp.task('deploy', function() {
-  return gulp.src('./dist/**/*')
-    .pipe(ghPages());
-});
+function deploy(cb) {
+  ghPages.publish(pathjs.join(process.cwd(), './dist'), cb);
+}
 
 const build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, jslibs))
 const watch = gulp.parallel(build, watchFiles, browserSync)
@@ -132,3 +132,4 @@ exports.html = html
 exports.build = build
 exports.watch = watch
 exports.default = watch
+exports.deploy = deploy;
