@@ -241,9 +241,12 @@
   }
 }
 
+.header__up {
+  transition: all 0.5s;
+}
+
 .header__up.sticky {
   opacity: 0;
-  transition: all 0.2s;
   @media (max-width: 992px) {
     opacity: 1;
   }
@@ -253,82 +256,83 @@
   transition: all 0.5s;
   transform: translateY(-100%);
   visibility: hidden;
-  display: none;
 }
 
-// .menu-fixed.active {
-//   transform: translateY(0);
-//   display: block;
-//   opacity: 1;
-//   visibility: visible;
-//   z-index: 2000;
-//   @media (max-width: 992px) {
-//     display: none;
-//   }
-//   .header__menu-item.active {
-//     a {
-//       color: $accent;
-//     }
-//   }
-// }
+.menu-fixed.active {
+  transform: translateY(0);
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  z-index: 2000;
+  @media (max-width: 992px) {
+    display: none;
+  }
+  .header__menu-item.active {
+    a {
+      color: $accent;
+    }
+  }
+}
 
-// .menu-fixed {
-//   z-index: 2000;
-//   .header-box {
-//     opacity: 1;
-//     transition: all .5s;
-//     max-width: 1200px;
-//     padding: 0 15px;
-//     margin: 0px auto;
-//   }
-//   .header__inner {
-//     opacity: 1;
-//   }
-//   .logo {
-//     transition: all .5s;
-//     opacity: 0;
-//     visibility: hidden;
-//     z-index: 1000;
-//     @media (max-width: 992px) {
-//       display: block;
-//     }
-//     img {
-//       width: 70px;
-//       height: 70px;
-//     }
-//   }
-//   .header__menu {
-//     margin: 0px auto;
-//   }
-//   .header__menu-item {
-//     &::after {
-//       margin: 0 45px;
-//       @media (max-width: 1080px) {
-//         margin: 0 35px;
-//       }
-//     }
-//   }
-//   .header__menu-item:last-child {
-//     &::after {
-//       content: '';
-//       margin: 0;
-//     }
-//   }
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   left: 0;
-//   width: 100%;
-//   z-index: 200;
-//   background: #000;
-//   transition: all .5s;
-//   .header__menu-link {
+.menu-fixed {
+  z-index: 2000;
+  .header-box {
+    opacity: 1;
+    transition: all .5s;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0px auto;
+  }
+  .header__inner {
+    min-height: 65px;
+    display: flex;
+    opacity: 1;
+  }
+  .logo {
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    @media (max-width: 992px) {
+      display: block;
+    }
+    img {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  .header__menu {
+    margin: 0px auto;
+  }
+  .header__menu-item {
+    &::after {
+      margin: 0 45px;
+      @media (max-width: 1080px) {
+        margin: 0 35px;
+      }
+    }
+  }
+  .header__menu-item:last-child {
+    &::after {
+      content: '';
+      margin: 0;
+    }
+  }
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+  background: #000;
+  transition: all .5s;
+  .header__menu-link {
 
-//     &:hover {
-//       color: $accent;
-//     }
-//   }
-// }
+    &:hover {
+      color: $accent;
+    }
+  }
+}
 
 #myNav {
   z-index: 3000;
