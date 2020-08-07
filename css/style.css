@@ -1524,11 +1524,14 @@ body {
   z-index: 100;
 }
 
+.header__up {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 .header__up.sticky {
   opacity: 0;
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
 }
 
 .menu-fixed {
@@ -1539,7 +1542,83 @@ body {
       -ms-transform: translateY(-100%);
           transform: translateY(-100%);
   visibility: hidden;
-  display: none;
+}
+
+.menu-fixed.active {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  z-index: 2000;
+}
+
+.menu-fixed.active .header__menu-item.active a {
+  color: #f39c12;
+}
+
+.menu-fixed {
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+  background: #000;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.menu-fixed .header-box {
+  opacity: 1;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0px auto;
+}
+
+.menu-fixed .header__inner {
+  min-height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+}
+
+.menu-fixed .logo {
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.menu-fixed .logo img {
+  width: 70px;
+  height: 70px;
+}
+
+.menu-fixed .header__menu {
+  margin: 0px auto;
+}
+
+.menu-fixed .header__menu-item::after {
+  margin: 0 45px;
+}
+
+.menu-fixed .header__menu-item:last-child::after {
+  content: '';
+  margin: 0;
+}
+
+.menu-fixed .header__menu-link:hover {
+  color: #f39c12;
 }
 
 #myNav {
@@ -3477,6 +3556,12 @@ button {
   }
 }
 
+@media (max-width: 1080px) {
+  .menu-fixed .header__menu-item::after {
+    margin: 0 35px;
+  }
+}
+
 @media (max-width: 992px) {
   .header__up {
     padding-top: 20px;
@@ -3525,6 +3610,14 @@ button {
 
   .header__up.sticky {
     opacity: 1;
+  }
+
+  .menu-fixed.active {
+    display: none;
+  }
+
+  .menu-fixed .logo {
+    display: block;
   }
 
   .burger {
