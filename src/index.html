@@ -174,7 +174,7 @@
             <div class="header-top__box">
               <div class="header-top__inner">
                 <div class="default-circle header-top__circle">
-                  <img src="img/bulb.svg" alt="" />
+                  <img class="lazyload" data-src="img/bulb.svg" alt="" />
                 </div>
                 <div class="header-top__text">
                   <div class="header-top__title default-title">
@@ -196,24 +196,26 @@
             </div>
 
             <div
-              class="header-top__img"
+              class="header-top__img lazyload"
               style="
-                background: url(img/story.jpg) center no-repeat;
                 background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
               "
+              data-bg="img/story.jpg"
             ></div>
           </div>
 
           <div class="header-down">
             <div class="header-down__inner">
               <div class="header-down__devices">
-                <img src="img/showcase.png" alt="" />
+                <img alt="" data-src="img/showcase.png" class="lazyload" />
               </div>
 
               <div class="header-statistic">
                 <div class="header-down__box">
                   <div class="default-circle header-down__circle">
-                    <img src="img/params.svg" alt="" />
+                    <img class="lazyload" data-src="img/params.svg" alt="" />
                   </div>
                   <div class="header-down__text">
                     <div class="default-title">Our Skills</div>
@@ -282,9 +284,10 @@
       </section>
 
       <div
-        class="about-bottom skew-block"
+        class="about-bottom skew-block lazyload"
+        data-bg="img/about-bg-1.jpg"
         style="
-          background: url(img/about-bg-1.jpg) no-repeat center;
+          background: no-repeat center;
           background-size: cover;
           background-attachment: fixed;
         "
@@ -319,7 +322,7 @@
           <div class="team-items">
             <div class="team-item">
               <div class="team-item__user">
-                <img src="img/person-1.jpg" alt="" />
+                <img class="lazyload" data-src="img/person-1.jpg" alt="" />
               </div>
 
               <div class="team-item__inner">
@@ -353,7 +356,7 @@
             </div>
             <div class="team-item">
               <div class="team-item__user">
-                <img src="img/person-2.jpg" alt="" />
+                <img class="lazyload" data-src="img/person-2.jpg" alt="" />
               </div>
               <div class="team-item__inner">
                 <div class="team-user">
@@ -387,7 +390,7 @@
             </div>
             <div class="team-item">
               <div class="team-item__user">
-                <img src="img/person-3.jpg" alt="" />
+                <img class="lazyload" data-src="img/person-3.jpg" alt="" />
               </div>
 
               <div class="team-item__inner">
@@ -422,7 +425,7 @@
             </div>
             <div class="team-item">
               <div class="team-item__user">
-                <img src="img/person-4.jpg" alt="" />
+                <img class="lazyload" data-src="img/person-4.jpg" alt="" />
               </div>
 
               <div class="team-item__inner">
@@ -458,9 +461,10 @@
         </div>
 
         <div
-          class="team-statistic skew-block"
+          class="team-statistic skew-block lazyload"
+          data-bg="img/about-bg-1.jpg"
           style="
-            background: url(img/about-bg-1.jpg) no-repeat center;
+            background: no-repeat center;
             background-size: cover;
             background-attachment: fixed;
           "
@@ -677,9 +681,10 @@
         </div>
 
         <div
-          class="skew-block service-skew"
+          class="skew-block service-skew lazyload"
+          data-bg="img/about-bg-1.jpg"
           style="
-            background: url(img/about-bg-1.jpg) no-repeat center;
+            background: no-repeat center;
             background-size: cover;
             background-attachment: fixed;
           "
@@ -698,13 +703,13 @@
                     consequat ipsum, nec sagittis sem nibh id elit.”
                   </p>
                   <div
-                    class="service-slide__avatar"
+                    class="service-slide__avatar lazyload"
+                    data-bg="img/team-avatar.jpg"
                     style="
-                      background: url(img/team-avatar.jpg) no-repeat center;
+                      background: no-repeat center;
                       background-size: cover;
                     "
                   >
-                    <!-- <img src="" alt=""> -->
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -717,13 +722,13 @@
                     consequat ipsum, nec sagittis sem nibh id elit.”
                   </p>
                   <div
-                    class="service-slide__avatar"
+                    class="service-slide__avatar swiper-lazy"
+                    data-background="img/team-avatar.jpg"
                     style="
-                      background: url(img/team-avatar.jpg) no-repeat center;
+                      background: no-repeat center;
                       background-size: cover;
                     "
                   >
-                    <!-- <img src="" alt=""> -->
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -736,17 +741,16 @@
                     consequat ipsum, nec sagittis sem nibh id elit.”
                   </p>
                   <div
-                    class="service-slide__avatar"
+                    class="service-slide__avatar swiper-lazy"
+                    data-background="img/team-avatar.jpg"
                     style="
-                      background: url(img/team-avatar.jpg) no-repeat center;
+                      background: no-repeat center;
                       background-size: cover;
                     "
                   >
-                    <!-- <img src="" alt=""> -->
+                  <div class="swiper-lazy-preloader"></div>
                   </div>
                 </div>
-                <!-- <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div> -->
               </div>
               <div class="team-pagination"></div>
             </div>
@@ -772,9 +776,10 @@
             <div class="swiper-wrapper portfolio-slider__wrapper">
               <div class="swiper-slide portfolio-slider__item">
                 <div
-                  class="portfolio-slider__item-top"
+                  class="portfolio-slider__item-top lazyload"
+                  data-bg="img/hah.jpg"
                   style="
-                    background: url(img/hah.jpg) no-repeat center;
+                    background: no-repeat center;
                     background-size: cover;
                   "
                 ></div>
@@ -782,9 +787,10 @@
 
               <div class="swiper-slide portfolio-slider__item">
                 <div
-                  class="portfolio-slider__item-top"
+                  class="portfolio-slider__item-top swiper-lazy"
+                  data-background="img/iguana.jpg"
                   style="
-                    background: url(img/iguana.jpg) no-repeat center;
+                    background: no-repeat center;
                     background-size: cover;
                   "
                 ></div>
@@ -792,9 +798,10 @@
 
               <div class="swiper-slide portfolio-slider__item">
                 <div
-                  class="portfolio-slider__item-top"
+                  class="portfolio-slider__item-top swiper-lazy"
+                  data-background="img/slider.jpg"
                   style="
-                    background: url(img/slider.jpg) no-repeat center;
+                    background: no-repeat center;
                     background-size: cover;
                   "
                 ></div>
@@ -884,9 +891,10 @@
             <div class="portfolio-categories__inner">
               <a data-groups='["graphics"]' href="" class="category-item sizer">
                 <div
-                  class="category-item__img"
+                  class="category-item__img lazyload"
+                  data-bg="img/iguana.jpg"
                   style="
-                    background: url(img/iguana.jpg) no-repeat center;
+                    background: no-repeat center;
                     background-size: cover;
                   "
                 >
@@ -911,12 +919,13 @@
                 class="category-item sizer"
               >
                 <div
-                  class="category-item__img"
-                  style="
-                    background: url(img/hah.jpg) no-repeat center;
-                    background-size: cover;
-                  "
-                >
+                class="category-item__img lazyload"
+                data-bg="img/hah.jpg"
+                style="
+                  background: no-repeat center;
+                  background-size: cover;
+                "
+              >
                   <div class="category-plus">
                     <div class="category-plus__wrapper">
                       <span></span>
@@ -934,9 +943,10 @@
 
               <a href="" data-groups='["branding"]' class="category-item sizer">
                 <div
-                  class="category-item__img"
+                  class="category-item__img lazyload"
+                  data-bg="img/1.jpg"
                   style="
-                    background: url(img/1.jpg) no-repeat center;
+                    background: no-repeat center;
                     background-size: cover;
                   "
                 >
@@ -957,9 +967,10 @@
 
               <a href="" data-groups='["graphics"]' class="category-item sizer">
                 <div
-                  class="category-item__img"
+                  class="category-item__img lazyload"
+                  data-bg="img/2.jpg"
                   style="
-                    background: url(img/2.jpg) no-repeat center;
+                    background: no-repeat center;
                     background-size: cover;
                   "
                 >
@@ -984,12 +995,13 @@
                 class="category-item sizer"
               >
                 <div
-                  class="category-item__img"
-                  style="
-                    background: url(img/3.jpg) no-repeat center;
-                    background-size: cover;
-                  "
-                >
+                class="category-item__img lazyload"
+                data-bg="img/3.jpg"
+                style="
+                  background: no-repeat center;
+                  background-size: cover;
+                "
+              >
                   <div class="category-plus">
                     <div class="category-plus__wrapper">
                       <span></span>
@@ -1006,10 +1018,11 @@
               </a>
 
               <a data-groups='["video"]' href="" class="category-item sizer">
-                <div
-                  class="category-item__img"
+                  <div
+                  class="category-item__img lazyload"
+                  data-bg="img/4.jpg"
                   style="
-                    background: url(img/4.jpg) no-repeat center;
+                    background: no-repeat center;
                     background-size: cover;
                   "
                 >
@@ -1034,12 +1047,13 @@
                 class="category-item sizer"
               >
                 <div
-                  class="category-item__img"
-                  style="
-                    background: url(img/slider.jpg) no-repeat center;
-                    background-size: cover;
-                  "
-                >
+                class="category-item__img lazyload"
+                data-bg="img/slider.jpg"
+                style="
+                  background: no-repeat center;
+                  background-size: cover;
+                "
+              >
                   <div class="category-plus">
                     <div class="category-plus__wrapper">
                       <span></span>
@@ -1057,9 +1071,10 @@
 
               <a data-groups='["branding"]' href="" class="category-item sizer">
                 <div
-                  class="category-item__img"
+                  class="category-item__img lazyload"
+                  data-bg="img/about.jpg"
                   style="
-                    background: url(img/about.jpg) no-repeat center;
+                    background: no-repeat center;
                     background-size: cover;
                   "
                 >
@@ -1083,9 +1098,10 @@
         </div>
 
         <div
-        class="portfolio-skew skew-block"
+        class="portfolio-skew skew-block lazyload"
+        data-bg="img/about-bg-1.jpg"
         style="
-          background: url(img/about-bg-1.jpg) no-repeat center;
+          background: no-repeat center;
           background-size: cover;
         background-attachment: fixed;
     ">
@@ -1124,7 +1140,7 @@
           <div class="blog-items">
             <div class="blog-item">
               <a href="">
-                <div class="blog-item__img" style="background: url(img/iguana.jpg) no-repeat center; background-size: cover;"></div>
+                <div class="blog-item__img lazyload" data-bg="img/iguana.jpg" style="background: no-repeat center; background-size: cover;"></div>
               </a>
 
 
@@ -1152,7 +1168,7 @@
             </div>
             <div class="blog-item">
               <a href="">
-                 <div class="blog-item__img" style="background: url(img/1.jpg) no-repeat center; background-size: cover;"></div>
+                 <div class="blog-item__img lazyload" data-bg="img/1.jpg" style="background: no-repeat center; background-size: cover;"></div>
               </a>
 
                 <div class="blog-item__wrapper">
@@ -1180,7 +1196,12 @@
             </div>
             <div class="blog-item">
               <a href="">
-                 <div class="blog-item__img" style="background: url(img/2.jpg) no-repeat center; background-size: cover;"></div>
+                 <div class="blog-item__img lazyload"
+                 style="
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                 " data-bg="img/2.jpg"></div>
               </a>
               <div class="blog-item__wrapper">
 
@@ -1207,7 +1228,8 @@
             </div>
             <div class="blog-item">
               <a href="">
-                <div class="blog-item__img" style="background: url(img/3.jpg) no-repeat center; background-size: cover;"></div>
+                <div class="blog-item__img lazyload" data-bg="img/3.jpg"
+                style="background: no-repeat center; background-size: cover;"></div>
               </a>
 
 
@@ -1238,8 +1260,8 @@
           </div>
         </div>
 
-        <div class="clients-skew skew-block" style="
-        background: url(img/about-bg-1.jpg) no-repeat center;
+        <div class="clients-skew skew-block lazyload" data-bg="img/about-bg-1.jpg" style="
+        background: no-repeat center;
         background-size: cover; background-attachment: fixed;">
           <div class="skew-overlay"></div>
           <div class="container">
@@ -1247,16 +1269,16 @@
               <div class="clients-skew__title">Our Clients</div>
               <div class="clients-skew__box">
                 <div class="clients-skew__item">
-                   <div class="clients-skew__img" style="background: url(img/clients-1.png) no-repeat center; background-size: cover;"></div>
+                   <div class="clients-skew__img lazyload" data-bg="img/clients-1.png" style="background: no-repeat center; background-size: cover;"></div>
                 </div>
                 <div class="clients-skew__item">
-                   <div class="clients-skew__img" style="background: url(img/clients-2.png) no-repeat center; background-size: cover;"></div>
+                  <div class="clients-skew__img lazyload" data-bg="img/clients-2.png" style="background: no-repeat center; background-size: cover;"></div>
                 </div>
                 <div class="clients-skew__item">
-                   <div class="clients-skew__img" style="background: url(img/clients-3.png) no-repeat center; background-size: cover;"></div>
+                  <div class="clients-skew__img lazyload" data-bg="img/clients-3.png" style="background: no-repeat center; background-size: cover;"></div>
                 </div>
                 <div class="clients-skew__item">
-                   <div class="clients-skew__img" style="background: url(img/clients-4.png) no-repeat center; background-size: cover;"></div>
+                  <div class="clients-skew__img lazyload" data-bg="img/clients-4.png" style="background: no-repeat center; background-size: cover;"></div>
                 </div>
               </div>
             </div>
@@ -1332,7 +1354,7 @@
       </section>
 
       <div class="google-map ">
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.810273174398!2d144.96287631492513!3d-37.81791274205307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x574ffdc0c6f63260!2zMTMvMiBFbGl6YWJldGggU3QsIE1lbGJvdXJuZSBWSUMgMzAwMCwg0JDQstGB0YLRgNCw0LvQuNGP!5e0!3m2!1sru!2sru!4v1596718457827!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe class="map lazyload" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.810273174398!2d144.96287631492513!3d-37.81791274205307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x574ffdc0c6f63260!2zMTMvMiBFbGl6YWJldGggU3QsIE1lbGJvdXJuZSBWSUMgMzAwMCwg0JDQstGB0YLRgNCw0LvQuNGP!5e0!3m2!1sru!2sru!4v1596718457827!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
     </main>
 
@@ -1356,6 +1378,7 @@
       </div>
     </footer>
 
+    <script src="js/libs/lazysizes.min.js" async=""></script>
     <script src="js/libs/jquery-3.5.1.min.js"></script>
     <script src="js/libs/shuffle.min.js"></script>
     <script src="js/libs/gumshoe.min.js"></script>

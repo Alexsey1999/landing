@@ -1,4 +1,10 @@
 $(function () {
+  document.addEventListener('lazybeforeunveil', function(e){
+      var bg = e.target.getAttribute('data-bg');
+      if(bg){
+          e.target.style.backgroundImage = 'url(' + bg + ')';
+      }
+  });
   var spy = new Gumshoe('.header__list a', {
     offset: function () {
       return document.querySelector('.menu-fixed').getBoundingClientRect().height;
@@ -23,6 +29,7 @@ $(function () {
     setWrapperSize: true,
     spaceBetween: 0,
     effect: "slide",
+    lazy: true,
 
     pagination: {
       el: ".swiper-pagination",
@@ -40,17 +47,6 @@ $(function () {
     },
 
     slidesPerColumnFill: "row",
-
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
-
-    // updateOnWindowResize: true,
-    // nested: false,
-    // watchOverflow: false,
-    // slidesPerColumn: 1,
-    // roundLengths: true,
   });
   var serviceSlider = new Swiper(".service-slider", {
     direction: "horizontal",
@@ -63,6 +59,7 @@ $(function () {
     setWrapperSize: true,
     spaceBetween: 0,
     effect: "slide",
+    lazy: true,
 
     pagination: {
       el: ".team-pagination",
@@ -80,17 +77,6 @@ $(function () {
     },
 
     slidesPerColumnFill: "row",
-
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
-
-    // updateOnWindowResize: true,
-    // nested: false,
-    // watchOverflow: false,
-    // slidesPerColumn: 1,
-    // roundLengths: true,
   });
 
   function openNav() {
@@ -128,15 +114,6 @@ $(function () {
     this.classList.toggle("is-active");
   });
 
-  // function ibg(){
-  // 	$.each($('.ibg'), function(index, val) {
-  // 		if($(this).find('img').length>0){
-  // 			$(this).css('background-image','url("'+$(this).find('img').attr('src')+'")');
-  // 		}
-  // 	});
-  // }
-  // ibg();
-
   function isPartiallyVisible(el, offset) {
     var elementBoundary = el.getBoundingClientRect();
 
@@ -157,6 +134,7 @@ $(function () {
     setWrapperSize: true,
     spaceBetween: 0,
     effect: "fade",
+    lazy: true,
 
     fadeEffect: {
       crossFade: true,
@@ -194,6 +172,7 @@ $(function () {
     setWrapperSize: true,
     spaceBetween: 0,
     effect: "fade",
+    lazy: true,
 
     fadeEffect: {
       crossFade: true,
@@ -208,10 +187,6 @@ $(function () {
       },
     },
 
-    // navigation: {
-    //   nextEl: '.portfolio-navigation__next',
-    //   prevEl: '.portfolio-navigation__prev',
-    // },
   });
 
   portfolioSliderBottom.controller.control = portfolioSliderTop;
@@ -276,7 +251,6 @@ $(function () {
     constructor(element) {
       this.element = element;
       this.shuffle = new Shuffle(element, {
-        // buffer: 1,
         itemSelector: ".category-item",
         speed: 250,
         isCentered: true,
@@ -321,7 +295,6 @@ $(function () {
     }
 
     _removeActiveClassFromChildren(parent) {
-      // const { children } = parent;
       const children = document.querySelectorAll(".category-list__btn");
       for (let i = children.length - 1; i >= 0; i--) {
         children[i].classList.remove("active");
