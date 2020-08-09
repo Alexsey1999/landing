@@ -9,11 +9,15 @@
   <body>
     <header
       class="header"
-      style="
-        background: url(img/header-bg-1.jpg) no-repeat center;
-        background-size: cover;
-      "
     >
+
+    <div class="header-bg">
+      <div class="header-bg-box ibg">
+        <img class="header-bg" src="img/header-bg-1.jpg" alt="">
+      </div>
+    </div>
+
+
       <div class="container">
         <div class="header__up">
           <div class="container">
@@ -195,15 +199,10 @@
               </div>
             </div>
 
-            <div
-              class="header-top__img lazyload"
-              style="
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-              "
-              data-bg="img/story.jpg"
-            ></div>
+
+            <div class="header-top__img">
+               <img class="lazyload" data-src="img/story.jpg" alt="">
+            </div>
           </div>
 
           <div class="header-down">
@@ -702,14 +701,8 @@
                     sollicitudin, lorem quis bibendum auctor, nisi elit
                     consequat ipsum, nec sagittis sem nibh id elit.”
                   </p>
-                  <div
-                    class="service-slide__avatar lazyload"
-                    data-bg="img/team-avatar.jpg"
-                    style="
-                      background: no-repeat center;
-                      background-size: cover;
-                    "
-                  >
+                  <div class="service-slide__avatar">
+                    <img class="lazyload" data-src="img/team-avatar.jpg" alt="">
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -721,14 +714,8 @@
                     sollicitudin, lorem quis bibendum auctor, nisi elit
                     consequat ipsum, nec sagittis sem nibh id elit.”
                   </p>
-                  <div
-                    class="service-slide__avatar swiper-lazy"
-                    data-background="img/team-avatar.jpg"
-                    style="
-                      background: no-repeat center;
-                      background-size: cover;
-                    "
-                  >
+                  <div class="service-slide__avatar">
+                    <img class="lazyload" data-src="img/team-avatar.jpg" alt="">
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -740,15 +727,8 @@
                     sollicitudin, lorem quis bibendum auctor, nisi elit
                     consequat ipsum, nec sagittis sem nibh id elit.”
                   </p>
-                  <div
-                    class="service-slide__avatar swiper-lazy"
-                    data-background="img/team-avatar.jpg"
-                    style="
-                      background: no-repeat center;
-                      background-size: cover;
-                    "
-                  >
-                  <div class="swiper-lazy-preloader"></div>
+                  <div class="service-slide__avatar">
+                    <img class="lazyload" data-src="img/team-avatar.jpg" alt="">
                   </div>
                 </div>
               </div>
@@ -772,39 +752,31 @@
             </p>
           </div>
 
-          <div class="swiper-container portfolio-slider-top">
+          <div class="swiper-container portfolio-slider-top" id="swiper">
             <div class="swiper-wrapper portfolio-slider__wrapper">
               <div class="swiper-slide portfolio-slider__item">
                 <div
-                  class="portfolio-slider__item-top lazyload"
-                  data-bg="img/hah.jpg"
-                  style="
-                    background: no-repeat center;
-                    background-size: cover;
-                  "
-                ></div>
+                  class="swiper-slide__inner portfolio-slider__item-top"
+                >
+                <img class="swiper-lazy" data-src="img/hah.jpg" alt="">
+              </div>
+
               </div>
 
               <div class="swiper-slide portfolio-slider__item">
                 <div
-                  class="portfolio-slider__item-top swiper-lazy"
-                  data-background="img/iguana.jpg"
-                  style="
-                    background: no-repeat center;
-                    background-size: cover;
-                  "
-                ></div>
+                  class="swiper-slide__inner portfolio-slider__item-top"
+                >
+                <img class="swiper-lazy" data-src="img/iguana.jpg" alt="">
+              </div>
               </div>
 
               <div class="swiper-slide portfolio-slider__item">
                 <div
-                  class="portfolio-slider__item-top swiper-lazy"
-                  data-background="img/slider.jpg"
-                  style="
-                    background: no-repeat center;
-                    background-size: cover;
-                  "
-                ></div>
+                  class="swiper-slide__inner portfolio-slider__item-top"
+                >
+                <img class="swiper-lazy" data-src="img/slider.jpg" alt="">
+              </div>
               </div>
             </div>
 
@@ -1139,8 +1111,8 @@
 
           <div class="blog-items">
             <div class="blog-item">
-              <a href="">
-                <div class="blog-item__img lazyload" data-bg="img/iguana.jpg" style="background: no-repeat center; background-size: cover;"></div>
+              <a class="blog-item__link" href="">
+                <img class="blog-item__photo lazyload" data-src="img/iguana.jpg" alt="">
               </a>
 
 
@@ -1167,8 +1139,8 @@
 
             </div>
             <div class="blog-item">
-              <a href="">
-                 <div class="blog-item__img lazyload" data-bg="img/1.jpg" style="background: no-repeat center; background-size: cover;"></div>
+              <a class="blog-item__link" href="">
+                 <img class="blog-item__photo lazyload" data-src="img/1.jpg" alt="">
               </a>
 
                 <div class="blog-item__wrapper">
@@ -1195,13 +1167,9 @@
 
             </div>
             <div class="blog-item">
-              <a href="">
-                 <div class="blog-item__img lazyload"
-                 style="
-                  background-position: center;
-                  background-repeat: no-repeat;
-                  background-size: cover;
-                 " data-bg="img/2.jpg"></div>
+              <a class="blog-item__link" href="">
+                 <img class="blog-item__photo lazyload" data-src="img/2.jpg" alt="">
+
               </a>
               <div class="blog-item__wrapper">
 
@@ -1227,9 +1195,8 @@
 
             </div>
             <div class="blog-item">
-              <a href="">
-                <div class="blog-item__img lazyload" data-bg="img/3.jpg"
-                style="background: no-repeat center; background-size: cover;"></div>
+              <a class="blog-item__link" href="">
+                <img class="blog-item__photo lazyload" data-src="img/3.jpg" alt="">
               </a>
 
 
@@ -1269,16 +1236,24 @@
               <div class="clients-skew__title">Our Clients</div>
               <div class="clients-skew__box">
                 <div class="clients-skew__item">
-                   <div class="clients-skew__img lazyload" data-bg="img/clients-1.png" style="background: no-repeat center; background-size: cover;"></div>
+                  <div class="clients-skew__wrapper">
+                    <img class="clients-skew__photo lazyload" data-src="img/clients-1.png" alt="">
+                  </div>
                 </div>
                 <div class="clients-skew__item">
-                  <div class="clients-skew__img lazyload" data-bg="img/clients-2.png" style="background: no-repeat center; background-size: cover;"></div>
+                  <div class="clients-skew__wrapper">
+                    <img class="clients-skew__photo lazyload" data-src="img/clients-2.png" alt="">
+                  </div>
                 </div>
                 <div class="clients-skew__item">
-                  <div class="clients-skew__img lazyload" data-bg="img/clients-3.png" style="background: no-repeat center; background-size: cover;"></div>
+                  <div class="clients-skew__wrapper">
+                    <img class="clients-skew__photo lazyload" data-src="img/clients-3.png" alt="">
+                  </div>
                 </div>
                 <div class="clients-skew__item">
-                  <div class="clients-skew__img lazyload" data-bg="img/clients-4.png" style="background: no-repeat center; background-size: cover;"></div>
+                  <div class="clients-skew__wrapper">
+                    <img class="clients-skew__photo lazyload" data-src="img/clients-4.png" alt="">
+                  </div>
                 </div>
               </div>
             </div>
