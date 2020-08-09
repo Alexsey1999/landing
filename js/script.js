@@ -1,21 +1,33 @@
 $(function () {
-  document.addEventListener('lazybeforeunveil', function(e){
-      var bg = e.target.getAttribute('data-bg');
-      if(bg){
-          e.target.style.backgroundImage = 'url(' + bg + ')';
+  function ibg() {
+    let ibg = document.querySelectorAll(".ibg");
+    for (var i = 0; i < ibg.length; i++) {
+      if (ibg[i].querySelector("img")) {
+        ibg[i].style.backgroundImage =
+          "url(" + ibg[i].querySelector("img").getAttribute("src") + ")";
       }
+    }
+  }
+  ibg();
+
+  document.addEventListener("lazybeforeunveil", function (e) {
+    var bg = e.target.getAttribute("data-bg");
+    if (bg) {
+      e.target.style.backgroundImage = "url(" + bg + ")";
+    }
   });
-  var spy = new Gumshoe('.header__list a', {
+  var spy = new Gumshoe(".header__list a", {
     offset: function () {
-      return document.querySelector('.menu-fixed').getBoundingClientRect().height;
+      return document.querySelector(".menu-fixed").getBoundingClientRect()
+        .height;
     },
   });
 
   var scroll = new SmoothScroll('a[href*="#"]', {
-    header: '.menu-fixed',
+    header: ".menu-fixed",
     speedAsDuration: true,
     speed: 1000,
-    easing: 'easeInOutCubic',
+    easing: "easeInOutCubic",
   });
 
   var headerSlider = new Swiper(".header-slider", {
@@ -59,7 +71,6 @@ $(function () {
     setWrapperSize: true,
     spaceBetween: 0,
     effect: "slide",
-    lazy: true,
 
     pagination: {
       el: ".team-pagination",
@@ -135,6 +146,18 @@ $(function () {
     spaceBetween: 0,
     effect: "fade",
     lazy: true,
+    autoplay: false,
+    // autoplayDisableOnInteraction: false,
+    // updateOnImagesReady: false,
+    // loadOnTransitionStart: true,
+    on: {
+      lazyImageReady(s) {
+        if (!s.params.autoplay.enabled) {
+          s.params.autoplay.delay = 2500;
+          s.autoplay.start();
+        }
+      },
+    },
 
     fadeEffect: {
       crossFade: true,
@@ -159,6 +182,14 @@ $(function () {
       nextEl: ".portfolio-navigation__next",
       prevEl: ".portfolio-navigation__prev",
     },
+  });
+
+  document.getElementById("swiper").addEventListener("mouseenter", function () {
+    portfolioSliderTop.autoplay.stop();
+  });
+
+  document.getElementById("swiper").addEventListener("mouseleave", function () {
+    portfolioSliderTop.autoplay.start();
   });
 
   var portfolioSliderBottom = new Swiper(".portfolio-slider-bottom", {
@@ -186,7 +217,6 @@ $(function () {
         autoHeight: true,
       },
     },
-
   });
 
   portfolioSliderBottom.controller.control = portfolioSliderTop;
